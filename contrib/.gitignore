@@ -1,0 +1,13 @@
+*.autosave
+*.pyc
+*.user
+*~
+.*.swp
+.DS_Store
+.sw[a-z]
+Thumbs.db
+tags
+tegra/
+*.i
+.download*
+!normal_lut.i
