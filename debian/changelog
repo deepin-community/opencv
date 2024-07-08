@@ -1,3 +1,9 @@
+opencv (4.6.0+dfsg-13deepin1) unstable; urgency=medium
+
+  * No source change upload against python 3.12.
+
+ -- Tianyu Chen <sweetyfish@deepin.org>  Mon, 08 Jul 2024 09:53:15 +0200
+
 opencv (4.6.0+dfsg-13) unstable; urgency=medium
 
   * Embed and enable the 3rdparty source for QUIRC as per user request.
