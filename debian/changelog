@@ -1,3 +1,9 @@
+opencv (3.6.0+dfsg-13deepin2) unstable; urgency=medium
+
+  * fix: cmake error on python3.12
+
+ -- hudeng <hudeng@deepin.org>  Thu, 12 Dec 2024 10:46:19 +0800
+
 opencv (4.6.0+dfsg-13deepin1) unstable; urgency=medium
 
   * No source change upload against python 3.12.
