@@ -1,8 +1,20 @@
-opencv (4.6.0+dfsg-13deepin1) unstable; urgency=medium
+opencv (4.6.0+dfsg-14) unstable; urgency=medium
 
-  * No source change upload against python 3.12.
+  * Team upload.
+  [ Gilles Filippini ]
+  * New patch python3.12.patch to fix FTBFS with Python 3.12.
+    Closes: #1076901.
+  [ Mo Zhou ]
+  * Fix depends-on-obsolete-package Depends: pkg-config => pkgconf.
 
- -- Tianyu Chen <sweetyfish@deepin.org>  Mon, 08 Jul 2024 09:53:15 +0200
+ -- Santiago Vila <sanvila@debian.org>  Thu, 15 Aug 2024 19:00:00 +0200
+
+opencv (4.6.0+dfsg-13.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Rename libraries for 64-bit time_t transition.  Closes: #1062839
+
+ -- Benjamin Drung <bdrung@debian.org>  Thu, 29 Feb 2024 03:07:04 +0000
 
 opencv (4.6.0+dfsg-13) unstable; urgency=medium
 
