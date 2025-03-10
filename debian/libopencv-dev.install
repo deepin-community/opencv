@@ -9,5 +9,3 @@ usr/bin/opencv_waldboost_detector
 usr/lib/*/cmake/opencv4/*.cmake
 # pkg-config
 usr/lib/*/pkgconfig/opencv4.pc
-# misc
-usr/share/licenses/opencv4/SoftFloat-COPYING.txt

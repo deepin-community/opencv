@@ -1,3 +1,7 @@
 Test-Command: python3 debian/tests/test.py
 Depends: @, python3, python3-numpy
 Restrictions: allow-stderr
+
+Test-Command: g++ -O2 debian/tests/bts-1017348.cc -lopencv_imgproc -I/usr/include/opencv4 -o bts-1017348; ./bts-1017348
+Depends: @, build-essential
+Restrictions: allow-stderr

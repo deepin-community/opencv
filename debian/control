@@ -5,7 +5,7 @@ Uploaders: Sam Hocevar (Debian packages) <sam+deb@zoy.org>,
            Mo Zhou <lumin@debian.org>
 Section: devel
 Priority: optional
-Build-Depends: ant [!hppa !hurd-any !kfreebsd-any],
+Build-Depends: dpkg-dev (>= 1.22.5), ant [!hppa !hurd-any !kfreebsd-any],
                cmake,
                debhelper-compat (= 13),
                default-jdk [!hppa !hurd-any !kfreebsd-any],
@@ -41,7 +41,7 @@ Build-Depends: ant [!hppa !hurd-any !kfreebsd-any],
                libqt5opengl5-dev,
                libraw1394-dev [linux-any],
                libswscale-dev,
-               libtbb-dev [amd64 arm64 armel armhf i386 mips mips64el mipsel ppc64el s390x powerpc powerpcspe ppc64 riscv64 sh4 sparc64],
+               libtbb-dev [amd64 arm64 armel armhf i386 mips mips64el mipsel ppc64el s390x powerpc powerpcspe ppc64 riscv64 sh4 sparc64 alpha],
                libtesseract-dev,
                libtiff-dev,
                libv4l-dev [linux-any],
@@ -106,7 +106,7 @@ Depends: libopencv-calib3d-dev (= ${binary:Version}),
          libopencv-videoio-dev (= ${binary:Version}),
          libopencv-videostab-dev (= ${binary:Version}),
          libopencv-viz-dev (= ${binary:Version}),
-         pkg-config,
+         pkgconf,
          ${misc:Depends},
          ${shlibs:Depends},
          libilmbase-dev
@@ -149,11 +149,11 @@ Package: libopencv-core-dev
 Architecture: any
 Multi-Arch: same
 Section: libdevel
-Depends: libopencv-core406 (= ${binary:Version}),
+Depends: libopencv-core410 (= ${binary:Version}),
          libtbb-dev [amd64 arm64 armel armhf i386 mips mips64el mipsel ppc64el s390x powerpc powerpcspe ppc64 riscv64 sh4 sparc64],
          zlib1g-dev,
          ${misc:Depends}
-Description: development files for libopencv-core406
+Description: development files for libopencv-core410
  This package contains the header files and static library needed to compile
  applications that use OpenCV (Open Computer Vision) core.
  .
@@ -167,7 +167,8 @@ Description: development files for libopencv-core406
  analysis, structural analysis, motion analysis and object tracking, object
  recognition, camera calibration and 3D reconstruction.
 
-Package: libopencv-core406
+Package: libopencv-core410
+Provides: ${t64:Provides}
 Architecture: any
 Multi-Arch: same
 Section: libs
@@ -193,9 +194,9 @@ Architecture: any
 Multi-Arch: same
 Section: libdevel
 Depends: libopencv-core-dev (= ${binary:Version}),
-         libopencv-ml406 (= ${binary:Version}),
+         libopencv-ml410 (= ${binary:Version}),
          ${misc:Depends}
-Description: development files for libopencv-ml406
+Description: development files for libopencv-ml410
  This package contains the header files and static library needed to compile
  applications that use OpenCV (Open Computer Vision) Machine Learning library.
  .
@@ -209,7 +210,8 @@ Description: development files for libopencv-ml406
  analysis, structural analysis, motion analysis and object tracking, object
  recognition, camera calibration and 3D reconstruction.
 
-Package: libopencv-ml406
+Package: libopencv-ml410
+Provides: ${t64:Provides}
 Architecture: any
 Multi-Arch: same
 Section: libs
@@ -235,9 +237,9 @@ Architecture: any
 Multi-Arch: same
 Section: libdevel
 Depends: libopencv-core-dev (= ${binary:Version}),
-         libopencv-imgproc406 (= ${binary:Version}),
+         libopencv-imgproc410 (= ${binary:Version}),
          ${misc:Depends}
-Description: development files for libopencv-imgproc406
+Description: development files for libopencv-imgproc410
  This package contains the header files and static library needed to compile
  applications that use OpenCV (Open Computer Vision) Image Processing library.
  .
@@ -251,7 +253,8 @@ Description: development files for libopencv-imgproc406
  analysis, structural analysis, motion analysis and object tracking, object
  recognition, camera calibration and 3D reconstruction.
 
-Package: libopencv-imgproc406
+Package: libopencv-imgproc410
+Provides: ${t64:Provides}
 Architecture: any
 Multi-Arch: same
 Section: libs
@@ -277,10 +280,10 @@ Architecture: any
 Multi-Arch: same
 Section: libdevel
 Depends: libgdcm-dev [!alpha !hppa !ia64 !kfreebsd-amd64 !kfreebsd-i386 !m68k !powerpcspe !sh4 !x32],
-         libopencv-imgcodecs406 (= ${binary:Version}),
+         libopencv-imgcodecs410 (= ${binary:Version}),
          libopencv-imgproc-dev (= ${binary:Version}),
          ${misc:Depends}
-Description: development files for libopencv-imgcodecs406
+Description: development files for libopencv-imgcodecs410
  This package contains the header files and static library needed to compile
  applications that use OpenCV (Open Computer Vision) Image Codecs library.
  .
@@ -294,7 +297,8 @@ Description: development files for libopencv-imgcodecs406
  analysis, structural analysis, motion analysis and object tracking, object
  recognition, camera calibration and 3D reconstruction.
 
-Package: libopencv-imgcodecs406
+Package: libopencv-imgcodecs410
+Provides: ${t64:Provides}
 Architecture: any
 Multi-Arch: same
 Section: libs
@@ -320,9 +324,9 @@ Architecture: any
 Multi-Arch: same
 Section: libdevel
 Depends: libopencv-imgproc-dev (= ${binary:Version}),
-         libopencv-video406 (= ${binary:Version}),
+         libopencv-video410 (= ${binary:Version}),
          ${misc:Depends}
-Description: development files for libopencv-video406
+Description: development files for libopencv-video410
  This package contains the header files and static library needed to compile
  applications that use OpenCV (Open Computer Vision) Video analysis library.
  .
@@ -336,7 +340,8 @@ Description: development files for libopencv-video406
  analysis, structural analysis, motion analysis and object tracking, object
  recognition, camera calibration and 3D reconstruction.
 
-Package: libopencv-video406
+Package: libopencv-video410
+Provides: ${t64:Provides}
 Architecture: any
 Multi-Arch: same
 Section: libs
@@ -363,9 +368,9 @@ Multi-Arch: same
 Section: libdevel
 Depends: libgphoto2-dev,
          libopencv-imgcodecs-dev (= ${binary:Version}),
-         libopencv-videoio406 (= ${binary:Version}),
+         libopencv-videoio410 (= ${binary:Version}),
          ${misc:Depends}
-Description: development files for libopencv-videoio406
+Description: development files for libopencv-videoio410
  This package contains the header files and static library needed to compile
  applications that use OpenCV (Open Computer Vision) Video I/O library.
  .
@@ -379,7 +384,8 @@ Description: development files for libopencv-videoio406
  analysis, structural analysis, motion analysis and object tracking, object
  recognition, camera calibration and 3D reconstruction.
 
-Package: libopencv-videoio406
+Package: libopencv-videoio410
+Provides: ${t64:Provides}
 Architecture: any
 Multi-Arch: same
 Section: libs
@@ -406,9 +412,9 @@ Multi-Arch: same
 Section: libdevel
 Depends: libopencv-highgui-dev (= ${binary:Version}),
          libopencv-ml-dev (= ${binary:Version}),
-         libopencv-objdetect406 (= ${binary:Version}),
+         libopencv-objdetect410 (= ${binary:Version}),
          ${misc:Depends}
-Description: development files for libopencv-objdetect406
+Description: development files for libopencv-objdetect410
  This package contains the header files and static library needed to compile
  applications that use OpenCV (Open Computer Vision) Object Detection library.
  .
@@ -422,7 +428,8 @@ Description: development files for libopencv-objdetect406
  analysis, structural analysis, motion analysis and object tracking, object
  recognition, camera calibration and 3D reconstruction.
 
-Package: libopencv-objdetect406
+Package: libopencv-objdetect410
+Provides: ${t64:Provides}
 Architecture: any
 Multi-Arch: same
 Section: libs
@@ -452,7 +459,7 @@ Depends: libavcodec-dev,
          libdc1394-dev [!kfreebsd-amd64 !kfreebsd-i386 !hurd-i386],
          libgphoto2-dev,
          libjpeg-dev,
-         libopencv-highgui406 (= ${binary:Version}),
+         libopencv-highgui410 (= ${binary:Version}),
          libopencv-videoio-dev (= ${binary:Version}),
          libopenexr-dev,
          libpng-dev,
@@ -460,7 +467,7 @@ Depends: libavcodec-dev,
          libswscale-dev,
          libtiff-dev,
          ${misc:Depends}
-Description: development files for libopencv-highgui406
+Description: development files for libopencv-highgui410
  This package contains the header files and static library needed to compile
  applications that use OpenCV (Open Computer Vision) High-level GUI and
  Media I/O library.
@@ -475,7 +482,8 @@ Description: development files for libopencv-highgui406
  analysis, structural analysis, motion analysis and object tracking, object
  recognition, camera calibration and 3D reconstruction.
 
-Package: libopencv-highgui406
+Package: libopencv-highgui410
+Provides: ${t64:Provides}
 Architecture: any
 Multi-Arch: same
 Section: libs
@@ -500,10 +508,10 @@ Package: libopencv-calib3d-dev
 Architecture: any
 Multi-Arch: same
 Section: libdevel
-Depends: libopencv-calib3d406 (= ${binary:Version}),
+Depends: libopencv-calib3d410 (= ${binary:Version}),
          libopencv-features2d-dev (= ${binary:Version}),
          ${misc:Depends}
-Description: development files for libopencv-calib3d406
+Description: development files for libopencv-calib3d410
  This package contains the header files and static library needed to compile
  applications that use OpenCV (Open Computer Vision) Camera Calibration library.
  .
@@ -517,7 +525,8 @@ Description: development files for libopencv-calib3d406
  analysis, structural analysis, motion analysis and object tracking, object
  recognition, camera calibration and 3D reconstruction.
 
-Package: libopencv-calib3d406
+Package: libopencv-calib3d410
+Provides: ${t64:Provides}
 Architecture: any
 Multi-Arch: same
 Section: libs
@@ -543,9 +552,9 @@ Architecture: any
 Multi-Arch: same
 Section: libdevel
 Depends: libopencv-core-dev (= ${binary:Version}),
-         libopencv-flann406 (= ${binary:Version}),
+         libopencv-flann410 (= ${binary:Version}),
          ${misc:Depends}
-Description: development files for libopencv-flann406
+Description: development files for libopencv-flann410
  This package contains the header files and static library needed to compile
  applications that use OpenCV (Open Computer Vision) Clustering and Search
  in Multi-Dimensional spaces library.
@@ -560,7 +569,8 @@ Description: development files for libopencv-flann406
  analysis, structural analysis, motion analysis and object tracking, object
  recognition, camera calibration and 3D reconstruction.
 
-Package: libopencv-flann406
+Package: libopencv-flann410
+Provides: ${t64:Provides}
 Architecture: any
 Multi-Arch: same
 Section: libs
@@ -586,9 +596,9 @@ Architecture: any
 Multi-Arch: same
 Section: libdevel
 Depends: libopencv-core-dev (= ${binary:Version}),
-         libopencv-dnn406 (= ${binary:Version}),
+         libopencv-dnn410 (= ${binary:Version}),
          ${misc:Depends}
-Description: development files for libopencv-dnn406
+Description: development files for libopencv-dnn410
  This package contains the header files and static library needed to compile
  in deep neural network module.
  .
@@ -602,7 +612,8 @@ Description: development files for libopencv-dnn406
  analysis, structural analysis, motion analysis and object tracking, object
  recognition, camera calibration and 3D reconstruction.
 
-Package: libopencv-dnn406
+Package: libopencv-dnn410
+Provides: ${t64:Provides}
 Architecture: any
 Multi-Arch: same
 Section: libs
@@ -627,12 +638,12 @@ Package: libopencv-features2d-dev
 Architecture: any
 Multi-Arch: same
 Section: libdevel
-Depends: libopencv-features2d406 (= ${binary:Version}),
+Depends: libopencv-features2d410 (= ${binary:Version}),
          libopencv-flann-dev (= ${binary:Version}),
          libopencv-highgui-dev (= ${binary:Version}),
          libopencv-ml-dev (= ${binary:Version}),
          ${misc:Depends}
-Description: development files for libopencv-features2d406
+Description: development files for libopencv-features2d410
  This package contains the header files and static library needed to compile
  applications that use OpenCV (Open Computer Vision) Feature Detection and
  Descriptor Extraction library.
@@ -647,7 +658,8 @@ Description: development files for libopencv-features2d406
  analysis, structural analysis, motion analysis and object tracking, object
  recognition, camera calibration and 3D reconstruction.
 
-Package: libopencv-features2d406
+Package: libopencv-features2d410
+Provides: ${t64:Provides}
 Architecture: any
 Multi-Arch: same
 Section: libs
@@ -673,9 +685,9 @@ Architecture: any
 Multi-Arch: same
 Section: libdevel
 Depends: libopencv-imgproc-dev (= ${binary:Version}),
-         libopencv-photo406 (= ${binary:Version}),
+         libopencv-photo410 (= ${binary:Version}),
          ${misc:Depends}
-Description: development files for libopencv-photo406
+Description: development files for libopencv-photo410
  This package contains the header files and static library needed to compile
  applications that use OpenCV (Open Computer Vision) computational photography
  library.
@@ -690,7 +702,8 @@ Description: development files for libopencv-photo406
  analysis, structural analysis, motion analysis and object tracking, object
  recognition, camera calibration and 3D reconstruction.
 
-Package: libopencv-photo406
+Package: libopencv-photo410
+Provides: ${t64:Provides}
 Architecture: any
 Multi-Arch: same
 Section: libs
@@ -718,9 +731,9 @@ Section: libdevel
 Depends: libopencv-calib3d-dev (= ${binary:Version}),
          libopencv-photo-dev (= ${binary:Version}),
          libopencv-video-dev (= ${binary:Version}),
-         libopencv-videostab406 (= ${binary:Version}),
+         libopencv-videostab410 (= ${binary:Version}),
          ${misc:Depends}
-Description: development files for libopencv-videostab406
+Description: development files for libopencv-videostab410
  This package contains the header files and static library needed to compile
  applications that use OpenCV (Open Computer Vision) video stabilization
  library.
@@ -735,7 +748,8 @@ Description: development files for libopencv-videostab406
  analysis, structural analysis, motion analysis and object tracking, object
  recognition, camera calibration and 3D reconstruction.
 
-Package: libopencv-videostab406
+Package: libopencv-videostab410
+Provides: ${t64:Provides}
 Architecture: any
 Multi-Arch: same
 Section: libs
@@ -762,9 +776,9 @@ Multi-Arch: same
 Section: libdevel
 Depends: libopencv-calib3d-dev (= ${binary:Version}),
          libopencv-objdetect-dev (= ${binary:Version}),
-         libopencv-stitching406 (= ${binary:Version}),
+         libopencv-stitching410 (= ${binary:Version}),
          ${misc:Depends}
-Description: development files for libopencv-stitching406
+Description: development files for libopencv-stitching410
  This package contains the header files and static library needed to compile
  applications that use OpenCV (Open Computer Vision) image stitching library.
  .
@@ -778,7 +792,8 @@ Description: development files for libopencv-stitching406
  analysis, structural analysis, motion analysis and object tracking, object
  recognition, camera calibration and 3D reconstruction.
 
-Package: libopencv-stitching406
+Package: libopencv-stitching410
+Provides: ${t64:Provides}
 Architecture: any
 Multi-Arch: same
 Section: libs
@@ -803,10 +818,10 @@ Package: libopencv-shape-dev
 Architecture: any
 Multi-Arch: same
 Section: libdevel
-Depends: libopencv-shape406 (= ${binary:Version}),
+Depends: libopencv-shape410 (= ${binary:Version}),
          libopencv-video-dev (= ${binary:Version}),
          ${misc:Depends}
-Description: development files for libopencv-shape406
+Description: development files for libopencv-shape410
  This package contains the header files and static library needed to compile
  applications that use OpenCV (Open Computer Vision) shape descriptors and
  matchers library.
@@ -821,7 +836,8 @@ Description: development files for libopencv-shape406
  analysis, structural analysis, motion analysis and object tracking, object
  recognition, camera calibration and 3D reconstruction.
 
-Package: libopencv-shape406
+Package: libopencv-shape410
+Provides: ${t64:Provides}
 Architecture: any
 Multi-Arch: same
 Section: libs
@@ -846,11 +862,11 @@ Package: libopencv-superres-dev
 Architecture: any
 Multi-Arch: same
 Section: libdevel
-Depends: libopencv-superres406 (= ${binary:Version}),
+Depends: libopencv-superres410 (= ${binary:Version}),
          libopencv-video-dev (= ${binary:Version}),
          libopencv-videoio-dev (= ${binary:Version}),
          ${misc:Depends}
-Description: development files for libopencv-superres406
+Description: development files for libopencv-superres410
  This package contains the header files and static library needed to compile
  applications that use OpenCV (Open Computer Vision) Super Resolution library.
  .
@@ -864,7 +880,8 @@ Description: development files for libopencv-superres406
  analysis, structural analysis, motion analysis and object tracking, object
  recognition, camera calibration and 3D reconstruction.
 
-Package: libopencv-superres406
+Package: libopencv-superres410
+Provides: ${t64:Provides}
 Architecture: any
 Multi-Arch: same
 Section: libs
@@ -890,9 +907,9 @@ Architecture: any
 Multi-Arch: same
 Section: libdevel
 Depends: libopencv-core-dev (= ${binary:Version}),
-         libopencv-viz406 (= ${binary:Version}),
+         libopencv-viz410 (= ${binary:Version}),
          ${misc:Depends}
-Description: development files for libopencv-viz406
+Description: development files for libopencv-viz410
  This package contains the header files and static library needed to compile
  applications that use OpenCV (Open Computer Vision) 3D data visualization
  library.
@@ -907,7 +924,8 @@ Description: development files for libopencv-viz406
  analysis, structural analysis, motion analysis and object tracking, object
  recognition, camera calibration and 3D reconstruction.
 
-Package: libopencv-viz406
+Package: libopencv-viz410
+Provides: ${t64:Provides}
 Architecture: any
 Multi-Arch: same
 Section: libs
@@ -957,7 +975,7 @@ Description: computer vision 3D data visualization library
 #Pre-Depends:
 # ${misc:Pre-Depends},
 #Depends:
-# libopencv-core406 (= ${binary:Version}),
+# libopencv-core410 (= ${binary:Version}),
 # ${misc:Depends},
 # ${shlibs:Depends},
 #Description: computer vision Graph API library
@@ -973,12 +991,13 @@ Description: computer vision 3D data visualization library
 # of high level functionalities for video acquisition, image processing and
 # analysis, structural analysis, motion analysis and object tracking, object
 # recognition, camera calibration and 3D reconstruction.
+
 Package: libopencv-contrib-dev
 Architecture: any
 Multi-Arch: same
 Section: libdevel
 Depends: libopencv-calib3d-dev (= ${binary:Version}),
-         libopencv-contrib406 (= ${binary:Version}),
+         libopencv-contrib410 (= ${binary:Version}),
          libopencv-core-dev (= ${binary:Version}),
          libopencv-dnn-dev (= ${binary:Version}),
          libopencv-features2d-dev (= ${binary:Version}),
@@ -997,7 +1016,7 @@ Depends: libopencv-calib3d-dev (= ${binary:Version}),
          libopencv-videostab-dev (= ${binary:Version}),
          libopencv-viz-dev (= ${binary:Version}),
          ${misc:Depends}
-Description: development files for libopencv-contrib406
+Description: development files for libopencv-contrib410
  This package contains the header files and static library needed to compile
  applications that use OpenCV (Open Computer Vision) contrib library.
  .
@@ -1011,7 +1030,8 @@ Description: development files for libopencv-contrib406
  analysis, structural analysis, motion analysis and object tracking, object
  recognition, camera calibration and 3D reconstruction.
 
-Package: libopencv-contrib406
+Package: libopencv-contrib410
+Provides: ${t64:Provides}
 Architecture: any
 Multi-Arch: same
 Section: libs
@@ -1047,6 +1067,7 @@ Description: computer vision contrlib library
    - rgbd
    - saliency
    - sfm
+   - signal
    - stereo
    - structured_light
    - surface_matching
@@ -1070,7 +1091,7 @@ Package: libopencv-java
 Architecture: amd64 arm64 armel armhf i386 mips64el mipsel ppc64el s390x alpha ia64 m68k powerpc ppc64 riscv64 sh4 sparc64 x32
 Multi-Arch: no
 Section: java
-Depends: libopencv406-jni (>= ${binary:Version}), ${misc:Depends}
+Depends: libopencv410-jni (>= ${binary:Version}), ${misc:Depends}
 Breaks: libopencv4.5-java,
 Replaces: libopencv4.5-java,
 Description: Java bindings for the computer vision library
@@ -1087,7 +1108,7 @@ Description: Java bindings for the computer vision library
  analysis, structural analysis, motion analysis and object tracking, object
  recognition, camera calibration and 3D reconstruction.
 
-Package: libopencv406-jni
+Package: libopencv410-jni
 Architecture: amd64 arm64 armel armhf i386 mips64el mipsel ppc64el s390x alpha ia64 m68k powerpc ppc64 riscv64 sh4 sparc64 x32
 Multi-Arch: no
 Section: java
@@ -1113,7 +1134,8 @@ Multi-Arch: same
 Section: python
 Depends: ${misc:Depends},
          ${python3:Depends},
-         ${shlibs:Depends}
+         ${shlibs:Depends},
+         python3-numpy,
 Description: Python 3 bindings for the computer vision library
  This package contains Python 3 bindings for the OpenCV (Open Computer Vision)
  library.

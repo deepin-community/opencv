@@ -1,20 +1,55 @@
-opencv (3.6.0+dfsg-13deepin3) unstable; urgency=medium
+opencv (4.10.0+dfsg-3) unstable; urgency=medium
 
-  * add python3.12 patch.
+  * No need to install duplicate license information. (Closes: #1041650)
+  * Properly clean up embedded 3rdparty source code. (Closes: #1046728)
+  * Explicitly add numpy in the dependency field of python3-opencv.
+  * Add autopkgtest for cv::boundingRect. (Closes: #1017348)
+  * Add libtbb-dev to Build-Depends for alpha architecture. (Closes: #1084865)
 
- -- lichenggang <lichenggang@deepin.org>  Tue, 31 Dec 2024 09:41:00 +0800
+ -- Mo Zhou <lumin@debian.org>  Tue, 25 Feb 2025 00:55:44 -0500
 
-opencv (3.6.0+dfsg-13deepin2) unstable; urgency=medium
+opencv (4.10.0+dfsg-2) unstable; urgency=medium
 
-  * fix: cmake error on python3.12
+  * Upload to unstable and start transition.
 
- -- hudeng <hudeng@deepin.org>  Thu, 12 Dec 2024 10:46:19 +0800
+ -- Mo Zhou <lumin@debian.org>  Fri, 14 Feb 2025 13:19:39 -0500
 
-opencv (4.6.0+dfsg-13deepin1) unstable; urgency=medium
+opencv (4.10.0+dfsg-1) experimental; urgency=medium
 
-  * No source change upload against python 3.12.
+  * New upstream version 4.10.0+dfsg
+    * copyright: execlude one more lena image from 4.10.0 release.
+    * Sync the 3rdparty quirc library to 4.10.0 version.
+    * Bump SOVERSION to 410.
+  * Rebase existing patches, refresh existing ones and remove merged ones.
+  * d/rules: Specify WITH_FLATBUFFERS=OFF.
+  * rules: Delete code for mipsel architecture.
+  * Update install files: `barcode` module was merged into objdetect.
+  * Install the new signal module from contrib.
+  * Remove the Breaks+Replaces introduced during the t64 transition --
+    They are no longer needed.
+  * Bump version in Java package control files.
+  * Update lintian overrides and copyright file.
+  * Upload to experimental.
 
- -- Tianyu Chen <sweetyfish@deepin.org>  Mon, 08 Jul 2024 09:53:15 +0200
+ -- Mo Zhou <lumin@debian.org>  Tue, 10 Dec 2024 23:40:09 -0500
+
+opencv (4.6.0+dfsg-14) unstable; urgency=medium
+
+  * Team upload.
+  [ Gilles Filippini ]
+  * New patch python3.12.patch to fix FTBFS with Python 3.12.
+    Closes: #1076901.
+  [ Mo Zhou ]
+  * Fix depends-on-obsolete-package Depends: pkg-config => pkgconf.
+
+ -- Santiago Vila <sanvila@debian.org>  Thu, 15 Aug 2024 19:00:00 +0200
+
+opencv (4.6.0+dfsg-13.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Rename libraries for 64-bit time_t transition.  Closes: #1062839
+
+ -- Benjamin Drung <bdrung@debian.org>  Thu, 29 Feb 2024 03:07:04 +0000
 
 opencv (4.6.0+dfsg-13) unstable; urgency=medium
 
