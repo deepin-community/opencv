@@ -1,14 +1,12 @@
-opencv (3.6.0+dfsg-13deepin3) unstable; urgency=medium
+opencv (4.6.0+dfsg-13deepin2) unstable; urgency=medium
 
-  * add python3.12 patch.
-
- -- lichenggang <lichenggang@deepin.org>  Tue, 31 Dec 2024 09:41:00 +0800
-
-opencv (3.6.0+dfsg-13deepin2) unstable; urgency=medium
-
+  [ hudeng ]
   * fix: cmake error on python3.12
 
- -- hudeng <hudeng@deepin.org>  Thu, 12 Dec 2024 10:46:19 +0800
+  [ lichenggang ]
+  * add python3.12 patch.
+
+ -- Tianyu Chen <sweetyfish@deepin.org>  Fri, 28 Mar 2025 10:48:42 +0800
 
 opencv (4.6.0+dfsg-13deepin1) unstable; urgency=medium
 
