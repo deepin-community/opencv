@@ -41,7 +41,7 @@ Build-Depends: ant [!hppa !hurd-any !kfreebsd-any],
                libqt5opengl5-dev,
                libraw1394-dev [linux-any],
                libswscale-dev,
-               libtbb-dev [amd64 arm64 armel armhf i386 mips mips64el mipsel ppc64el s390x powerpc powerpcspe ppc64 riscv64 sh4 sparc64],
+               libtbb-dev [amd64 arm64 armel armhf i386 mips mips64el mipsel ppc64el s390x powerpc powerpcspe ppc64 riscv64 sh4 sparc64 sw64],
                libtesseract-dev,
                libtiff-dev,
                libv4l-dev [linux-any],
@@ -150,7 +150,7 @@ Architecture: any
 Multi-Arch: same
 Section: libdevel
 Depends: libopencv-core406 (= ${binary:Version}),
-         libtbb-dev [amd64 arm64 armel armhf i386 mips mips64el mipsel ppc64el s390x powerpc powerpcspe ppc64 riscv64 sh4 sparc64],
+         libtbb-dev [amd64 arm64 armel armhf i386 mips mips64el mipsel ppc64el s390x powerpc powerpcspe ppc64 riscv64 sh4 sparc64 sw64],
          zlib1g-dev,
          ${misc:Depends}
 Description: development files for libopencv-core406
