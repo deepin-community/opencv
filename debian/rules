@@ -28,7 +28,7 @@ else ifeq ($(DEB_HOST_ARCH_CPU),ppc64el)
 endif
 
 # TBB support
-ifneq (,$(findstring $(DEB_HOST_ARCH), amd64 arm64 armel armhf i386 mips mips64el mipsel ppc64el s390x powerpc powerpcspe riscv64 ppc64 sh4 sparc64))
+ifneq (,$(findstring $(DEB_HOST_ARCH), amd64 arm64 armel armhf i386 mips mips64el mipsel ppc64el s390x powerpc powerpcspe riscv64 ppc64 sh4 sparc64 sw64))
 CMAKE_ARCH_FLAGS += -DWITH_TBB=ON
 else
 CMAKE_ARCH_FLAGS += -DWITH_TBB=OFF
