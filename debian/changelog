@@ -1,4 +1,4 @@
-opencv (3.6.0+dfsg-13deepin4) unstable; urgency=medium
+opencv (4.6.0+dfsg-13deepin2) unstable; urgency=medium
 
   * feat: add sw64 support.
 
