@@ -1,3 +1,9 @@
+opencv (3.6.0+dfsg-13deepin4) unstable; urgency=medium
+
+  * feat: add sw64 support.
+
+ -- hudeng <hudeng@deepin.org>  Tue, 03 Jun 2025 20:57:59 +0800
+
 opencv (4.6.0+dfsg-13deepin1) unstable; urgency=medium
 
   * No source change upload against python 3.12.
