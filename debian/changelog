@@ -1,3 +1,10 @@
+opencv (4.6.0+dfsg-13deepin3) unstable; urgency=medium
+
+  * Add B-D on python3-numpy, fixing ftbfs.
+    Related: https://bugs.debian.org/1118744
+
+ -- Tianyu Chen <sweetyfish@deepin.org>  Wed, 12 Nov 2025 14:51:29 +0800
+
 opencv (4.6.0+dfsg-13deepin2) unstable; urgency=medium
 
   * feat: add sw64 support.
